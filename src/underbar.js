@@ -108,12 +108,14 @@ var _ = {};
   _.uniq = function(array) {
   	var newArr = [];
 
+	_.each(array, function(ele) {if(_.indexOf(newArr,ele)==-1) newArr.push(ele);});
+/*
   	for(var i = 0; i <array.length; i++)
   	{
   		if(_.indexOf(newArr,array[i])=== -1)
   			newArr.push(array[i]);
   	}
- 
+ */
   	return newArr;
   	
   };
